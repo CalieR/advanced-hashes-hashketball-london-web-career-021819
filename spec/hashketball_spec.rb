@@ -259,19 +259,19 @@ describe 'bonus' do
   end
 
   # describe '#winning_team' do
-  # 
+  #
   #   it 'returns the Brooklyn Nets' do
   #     expect(winning_team).to eq("Brooklyn Nets")
   #   end
-  # 
+  #
   # end
 
   # describe '#player_with_longest_name' do
-  # 
+  #
   #   it 'returns Brendan Haywood' do
   #     expect(player_with_longest_name).to eq("Brendan Haywood")
   #   end
-  # 
+  #
   # end
 
 end
