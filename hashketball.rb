@@ -233,7 +233,7 @@ big_foot = ""
       if x == :players
         y.each do |player_name, stats|
           stats.each do |j, k|
-            if j == :shoe 
+            if j == :shoe
               if k == biggest
                 big_foot = player_name
               end
@@ -248,5 +248,3 @@ big_foot
 return player_stats(big_foot)[:rebounds]
 
 end
-
-
