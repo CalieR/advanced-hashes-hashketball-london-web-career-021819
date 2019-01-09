@@ -1,6 +1,6 @@
 require 'pry'
 
-# TO DO: look at refactoring most of these methods, they look verbose
+# TO DO: refactor these methods to make more usable and less verbose
 
 def game_hash
   teams = {
@@ -246,3 +246,5 @@ big_foot
 return player_stats(big_foot)[:rebounds]
 
 end
+
+
