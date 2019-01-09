@@ -214,9 +214,13 @@ def player_stats(player)
   end
 end
 
-def big_shoe_rebounds
- all = game_hash[:home][:players].merge(game_hash[:away][:players])
+def all_players_hash
+  game_hash[:home][:players].merge(game_hash[:away][:players])
+end  
 
+def big_shoe_rebounds
+ all_players_hash
+  
   shoes = []
   all.each do |k, v|
     v.each do |a, b|
