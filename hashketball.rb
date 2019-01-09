@@ -245,6 +245,6 @@ big_foot = ""
  end
 big_foot
 
-return player_stats(big_foot)[:rebounds]
+player_stats(big_foot)[:rebounds]
 
 end
