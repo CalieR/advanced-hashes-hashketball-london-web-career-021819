@@ -217,33 +217,32 @@ end
 def big_shoe_rebounds
  all = game_hash[:home][:players].merge(game_hash[:away][:players])
 
-shoes = []
-all.each do |k, v|
-  v.each do |a, b|
-    if a == :shoe
-      shoes << b
+  shoes = []
+  all.each do |k, v|
+    v.each do |a, b|
+      if a == :shoe
+        shoes << b
+      end
     end
   end
-end
-biggest = shoes.max # 19 - Mason Plumlee
+  biggest = shoes.max # 19 - Mason Plumlee
 
-big_foot = ""
- game_hash.each do |location, team_info|
-    team_info.each do |x, y|
-      if x == :players
-        y.each do |player_name, stats|
-          stats.each do |j, k|
-            if j == :shoe
-              if k == biggest
-                big_foot = player_name
+  big_foot = ""
+   game_hash.each do |location, team_info|
+      team_info.each do |x, y|
+        if x == :players
+          y.each do |player_name, stats|
+            stats.each do |j, k|
+              if j == :shoe
+                if k == biggest
+                  big_foot = player_name
+                end
               end
             end
           end
         end
       end
-    end
- end
+   end
 
-player_stats(big_foot)[:rebounds]
-
+  player_stats(big_foot)[:rebounds]
 end
