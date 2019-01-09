@@ -216,7 +216,7 @@ end
 
 def all_players_hash
   game_hash[:home][:players].merge(game_hash[:away][:players])
-end  
+end
 
 def big_shoe_rebounds
  all_players_hash
