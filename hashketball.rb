@@ -171,9 +171,8 @@ def player_numbers(team)
 end
 
 def player_stats(player) # using this method as a helper enabled me to refactor several other methods
-  game_hash.values.each do |k|
-  # game_hash.each do |location, team_info|
-  #   team_info.each do |k, v|
+  game_hash.each do |location, team_info|
+    team_info.each do |k, v|
       if k == :players
         v.each do |name, stats|
           if name == player
@@ -182,7 +181,7 @@ def player_stats(player) # using this method as a helper enabled me to refactor 
         end
       end
     end
-  
+  end
 end
 
 def all_players # returns a hash containing stats for every player
