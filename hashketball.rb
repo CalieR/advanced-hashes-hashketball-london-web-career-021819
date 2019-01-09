@@ -235,7 +235,7 @@ def most_points_scored
     y.each do |a, b|
       if a == :points
         if b == best_score
-         x = highest_scorer
+         highest_scorer = x
         end
       end
      end
