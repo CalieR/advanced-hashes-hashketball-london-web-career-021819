@@ -213,8 +213,6 @@ def player_stats(player)
 end
 
 def big_shoe_rebounds
- # find player with largest shoe size
- # return that players number of rebounds
  all = game_hash[:home][:players].merge(game_hash[:away][:players])
 
 shoes = []
