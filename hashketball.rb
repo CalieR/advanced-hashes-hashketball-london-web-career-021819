@@ -220,5 +220,27 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
+  points = []
+  all_players.each do |k, v|
+    v.each do |a, b|
+      if a == :points
+        points << b
+      end
+    end
+  end
+  best_score = points.max # 33 - Ben Gordon
+
+  highest_scorer = ""
+  all_players.each do |x, y|
+    y.each do |a, b|
+      if a == :points
+        if b == best_score
+         x = highest_scorer
+        end
+      end
+     end
+   end
+
+   highest_scorer
 
 end
