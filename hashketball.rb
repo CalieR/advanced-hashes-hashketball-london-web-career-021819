@@ -189,6 +189,7 @@ def all_players # returns a hash containing stats for every player
 end
 
 def big_shoe_rebounds
+  # find the biggest shoe size
   shoes = []
   all_players.each do |k, v|
     v.each do |a, b|
@@ -199,6 +200,7 @@ def big_shoe_rebounds
   end
   biggest = shoes.max # 19 - Mason Plumlee
 
+  # find the player with biggest shoe size
   big_foot = ""
    game_hash.each do |location, team_info|
       team_info.each do |x, y|
@@ -216,10 +218,12 @@ def big_shoe_rebounds
       end
    end
 
+  # find that players number of rebounds
   player_stats(big_foot)[:rebounds]
 end
 
 def most_points_scored
+  # find the highest number of points
   points = []
   all_players.each do |k, v|
     v.each do |a, b|
@@ -230,6 +234,7 @@ def most_points_scored
   end
   best_score = points.max # 33 - Ben Gordon
 
+  # use the highest number of points to find the matching player
   highest_scorer = ""
   all_players.each do |x, y|
     y.each do |a, b|
