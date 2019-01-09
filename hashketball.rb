@@ -243,7 +243,6 @@ big_foot = ""
       end
     end
  end
-# big_foot
 
 player_stats(big_foot)[:rebounds]
 
