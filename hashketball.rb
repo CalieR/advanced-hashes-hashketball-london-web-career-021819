@@ -218,3 +218,7 @@ def big_shoe_rebounds
 
   player_stats(big_foot)[:rebounds]
 end
+
+def most_points_scored
+
+end
