@@ -219,10 +219,10 @@ def all_players_hash
 end
 
 def big_shoe_rebounds
- all_players_hash
+
 
   shoes = []
-  all.each do |k, v|
+  all_players_hash.each do |k, v|
     v.each do |a, b|
       if a == :shoe
         shoes << b
