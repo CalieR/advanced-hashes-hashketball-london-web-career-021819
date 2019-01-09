@@ -214,13 +214,13 @@ def player_stats(player)
   end
 end
 
-def all_players_hash
+def all_players # returns a hash containing stats for every player
   game_hash[:home][:players].merge(game_hash[:away][:players])
 end
 
 def big_shoe_rebounds
   shoes = []
-  all_players_hash.each do |k, v|
+  all_players.each do |k, v|
     v.each do |a, b|
       if a == :shoe
         shoes << b
