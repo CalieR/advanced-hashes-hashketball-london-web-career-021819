@@ -220,7 +220,7 @@ end
 
 def big_shoe_rebounds
  all_players_hash
-  
+
   shoes = []
   all.each do |k, v|
     v.each do |a, b|
