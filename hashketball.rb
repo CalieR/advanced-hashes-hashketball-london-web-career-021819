@@ -120,21 +120,22 @@ def game_hash
 end
 
 def num_points_scored(player)
-  game_hash.each do |location, team_info| # location is :home/:away.
-    team_info.each do |k, v|  # team_info is :name/:colors/:players
-      if k == :players # k is :name/:colors/:players
-        v.each do |player_name, stats|
-          if player_name == player
-            stats.each do |a, b| # then iterate over their stats to find :points
-              if a == :points
-                return b # have to expicitly return b to get the value of points hash, otherwise the return value is everything in the team hash of player
-              end
-            end
-          end
-        end
-      end
-    end
-  end
+  player_stats(player)[:points]
+  # game_hash.each do |location, team_info| # location is :home/:away.
+  #   team_info.each do |k, v|  # team_info is :name/:colors/:players
+  #     if k == :players # k is :name/:colors/:players
+  #       v.each do |player_name, stats|
+  #         if player_name == player
+  #           stats.each do |a, b| # then iterate over their stats to find :points
+  #             if a == :points
+  #               return b # have to expicitly return b to get the value of points hash, otherwise the return value is everything in the team hash of player
+  #             end
+  #           end
+  #         end
+  #       end
+  #     end
+  #   end
+  # end
 end
 
 def shoe_size(player)
@@ -246,5 +247,3 @@ big_foot
 return player_stats(big_foot)[:rebounds]
 
 end
-
-
