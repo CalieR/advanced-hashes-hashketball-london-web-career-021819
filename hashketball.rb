@@ -121,40 +121,10 @@ end
 
 def num_points_scored(player)
   player_stats(player)[:points]
-  # game_hash.each do |location, team_info| # location is :home/:away.
-  #   team_info.each do |k, v|  # team_info is :name/:colors/:players
-  #     if k == :players # k is :name/:colors/:players
-  #       v.each do |player_name, stats|
-  #         if player_name == player
-  #           stats.each do |a, b| # then iterate over their stats to find :points
-  #             if a == :points
-  #               return b # have to expicitly return b to get the value of points hash, otherwise the return value is everything in the team hash of player
-  #             end
-  #           end
-  #         end
-  #       end
-  #     end
-  #   end
-  # end
 end
 
 def shoe_size(player)
   player_stats(player)[:shoe]
-  # game_hash.each do |location, team_info|
-  #   team_info.each do |k, v|
-  #     if k == :players
-  #       v.each do |player_name, stats|
-  #         if player_name == player
-  #           stats.each do |a, b|
-  #             if a == :shoe # exactl same as previous method but for different stat
-  #               return b
-  #             end
-  #           end
-  #         end
-  #       end
-  #     end
-  #   end
-  # end
 end
 
 def team_colors(team)
@@ -200,7 +170,7 @@ def player_numbers(team)
   return result
 end
 
-def player_stats(player)
+def player_stats(player) # using this method as a helper enabled me to refactor several other methods
   game_hash.each do |location, team_info|
     team_info.each do |k, v|
       if k == :players
